@@ -4,8 +4,8 @@ import pandas as pd
 
 # 1. Google Earth Engine-ni kalit orqali ishga tushirish
 def sarlavha_sozlamalari():
-    st.set_page_config(page_title="Shovot Monitoring", layout="wide")
-    st.title("🛰 Shovot tumani Onlayn Monitoring Tizimi")
+    st.set_page_config(page_title="Shavat Monitoring", layout="wide")
+    st.title("🛰 Shavat tumani Onlayn Monitoring Tizimi")
     st.write("Google Earth Engine va Streamlit yordamida NDVI tahlili")
 
 def gee_init():
@@ -34,7 +34,7 @@ if gee_init():
     # Hududni belgilash (Shovot tumani)
     # Eslatma: 'ADM2_NAME' nomi GEE bazasida 'Shavat' deb yozilgan bo'lishi mumkin
     region = ee.FeatureCollection('FAO/GAUL/2015/level2') \
-               .filter(ee.Filter.eq('ADM2_NAME', 'Shavat')) # yoki 'Shovot'
+               .filter(ee.Filter.eq('ADM2_NAME', 'Shavat')) # yoki 'Shavat'
     
     # Ma'lumotlarni yuklash (MODIS NDVI)
     start_date = f'{yil}-05-01'
